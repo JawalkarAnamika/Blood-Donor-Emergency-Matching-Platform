@@ -1,0 +1,21 @@
+<h2>Donors</h2>
+<table border=""1>
+    <tr>
+        <th>Name</th>
+        <th>Blood</th>
+        <th>City</th>
+        <th>Verified</th>
+        <th>Action</th>
+    </tr>
+    {% for d in donors %}
+    <tr>
+        <td>{{d.name}}</td>
+        <td>{{d.blood_group}}</td>
+        <td>{{d.city}}</td>
+        <td>{{d.verifies}}</td>
+        <td><a href="/admin/verify{{d.donor_id}}">Verify</a></td>
+    </tr>
+    {% endfor %}
+</table>
+<a href="/admin/dashboard">Go to Back</a>
+

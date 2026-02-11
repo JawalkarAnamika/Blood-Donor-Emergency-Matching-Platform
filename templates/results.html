@@ -1,0 +1,19 @@
+<h2>Matched Donors</h2>
+<table border="1" cellpadding="8">
+    <tr>
+        <th>Donor Name</th>
+        <th>Blood Group</th>
+        <th>Phone Number</th>
+        <th>Distance(km)</th>
+    </tr>
+{% for d in donors %}
+    <tr>
+        <td>{{d.name}}</td>
+        <td>{{d.blood_group}}</td>
+        <td>{{d.phone}}</td>
+        <td>{{d.distance}}km</td>
+
+    </tr>
+{% endfor %}
+</table>
+<a href="/">Go to Back</a>

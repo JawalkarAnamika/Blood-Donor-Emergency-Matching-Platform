@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>Login</title>
+    </head>
+    <body>
+                {% include"navbar.html" %}
+
+        <h2>Login</h2>
+        {% if error %}
+        <p style="color:red;">{{error}}</p>
+        {% endif %}
+        <form method="POST" action="/login">
+            <label>Username:</label><br>
+            <input type="text" name="username"><br><br>
+            <label>Password:</label><br>
+            <input type="password" name="password"><br><br>
+            <input type="submit" value="Login">
+        </form>
+        <a href="/add"> Add new user </a><br>
+        <a href="/admin" style="color:red;margin-right:15px;">Admin Login</a>    
+
+    </body>
+</html>

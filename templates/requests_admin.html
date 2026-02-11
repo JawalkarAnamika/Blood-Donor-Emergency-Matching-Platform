@@ -1,0 +1,20 @@
+<h2>All Requests</h2>
+<table border=""1>
+    <tr>
+        <th>Requester</th>
+        <th>Hospital</th>
+        <th>Blood</th>
+        <th>Urgency</th>
+        <th>Status</th>
+    </tr>
+    {% for r in requests %}
+    <tr>
+        <td>{{r.requester_name}}</td>
+        <td>{{r.hospital_name}}</td>
+        <td>{{r.blood_group}}</td>
+        <td>{{r.urgency}}</td>
+        <td>{{r.satus}}</td>
+    </tr>
+    {% endfor %}
+</table>
+<a href="/admin/dashboard">Go to Back</a>
